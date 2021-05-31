@@ -1,14 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import CounterReact from './CounterReact'
-
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <div>
-    <CounterReact />
   </div>,
   document.getElementById('root')
 )
