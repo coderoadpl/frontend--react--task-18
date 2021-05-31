@@ -1,12 +1,25 @@
 import React from 'react'
 
 export class CounterReact extends React.Component {
-  state = {
-    number: 0
-  }
+  constructor () {
+    super()
 
-  inc = () => {
-    this.setState({ number: this.state.number + 1 })
+    this.state = {
+      number: 0
+    }
+
+    this.inc = () => {
+      this.setState({ number: this.state.number + 1 })
+    }
+
+    setInterval(
+      () => {
+        // eslint-disable-next-line react/no-direct-mutation-state
+        this.state.number = this.state.number + 1
+        console.log(this.state.number)
+      },
+      1000
+    )
   }
 
   render () {
